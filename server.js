@@ -2,7 +2,7 @@ var Analytics = require("analytics-reporter"),
 	CronJob = require('cron').CronJob;
 
 var job = new CronJob({
-	cronTime: '0 * * * * *', 
+	cronTime: '0 */30 * * * *', 
 	onTick: function() {
 		var analytics = new Analytics();
 		analytics.run({'csv': true, 'json': true}, function() {
