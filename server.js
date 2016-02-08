@@ -1,13 +1,8 @@
 var Analytics = require("analytics-reporter"),
 	CronJob = require('cron').CronJob,
 	fs = require('fs'),
-	analytics_creds  = process.env.ANALYTICS_CREDS,
-	cfenv = require("cfenv"),
-	appEnv = cfenv.getAppEnv(),
-	creds = appEnv.getService(analytics_creds).credentials;
-
-
-key = JSON.parse(fs.readFileSync(creds.ANALYTICS_KEY_PATH, 'utf8')).private_key;
+	creds = require("cfenv").getAppEnv().getService(process.env.ANALYTICS_CREDS).credentials,
+	key = JSON.parse(fs.readFileSync(creds.ANALYTICS_KEY_PATH, 'utf8')).private_key;
 
 var analytics = new Analytics(
 	key,
