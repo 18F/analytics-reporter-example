@@ -1,0 +1,10 @@
+---
+applications:
+- name: analytics-reporter
+  no-route: true
+  disk_quota: 256M
+  memory: 128M
+  env:
+   ANALYTICS_CREDS: analytics-reporter-creds
+  services:
+   - analytics-reporter-creds
