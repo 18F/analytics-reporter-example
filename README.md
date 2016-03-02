@@ -4,6 +4,9 @@ After entering this command you'll be prompted for each credentials individually
 ```bash
 cf cups analytics-reporter-creds -p "ANALYTICS_KEY_0, ANALYTICS_KEY_1, ANALYTICS_KEY_2, ANALYTICS_KEY_3, ANALYTICS_REPORT_EMAIL, ANALYTICS_REPORT_IDS, ANALYTICS_REPORTS_PATH"
 ```
+
+The keys must be split up using ANALYTICS_KEY_0, ANALYTICS_KEY_1, ...
+
 ### Deploy
 ```bash
 cf push
