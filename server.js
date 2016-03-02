@@ -1,8 +1,7 @@
 var Analytics = require("analytics-reporter"),
-	CronJob = require('cron').CronJob,
-	fs = require('fs'),
-	creds = require("cfenv").getAppEnv().getService(process.env.ANALYTICS_CREDS).credentials,
-	key = JSON.parse(fs.readFileSync(creds.ANALYTICS_KEY_PATH, 'utf8')).private_key;
+		CronJob = require('cron').CronJob,
+		fs = require('fs'),
+		creds = require("cfenv").getAppEnv().getService(process.env.ANALYTICS_CREDS).credentials;
 
 var analytics = new Analytics(
 	key,
@@ -19,9 +18,8 @@ analytics.run({'csv': true, 'json': true}, function() {
 });
 
 var job = new CronJob({
-	cronTime: '0 */30 * * * *', 
+	cronTime: '0 */5 * * * *',
 	onTick: function() {
-		var analytics = new Analytics();
 		analytics.run({'csv': true, 'json': true}, function() {
 			console.log('Reports Finished')
 		});
