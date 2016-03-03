@@ -3,7 +3,7 @@ applications:
 - name: analytics-reporter
   no-route: true
   disk_quota: 256M
-  memory: 128M
+  memory: 256M
   env:
    ANALYTICS_CREDS: analytics-reporter-creds
   services:
