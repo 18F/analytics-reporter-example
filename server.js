@@ -31,7 +31,7 @@ var realtimeJobs = new CronJob({
 });
 
 var dailyReports = new CronJob({
-  	cronTime: '0 * * * *', //10 5 * * *
+  	cronTime: '10 5 * * *',
   	onTick: function() {
 			analytics.run({'csv': true, 'json': true, 'only': 'os', 'publish': true}, function() {
 				console.log('Reports Finished')
