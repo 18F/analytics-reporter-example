@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "analytics-reporter": "git+https://github.com/geramirez/analytics-reporter.git",
-    "cron": "^1.1.0",
-    "cfenv" : "1.0.0"
+    "async": "^1.5.2",
+    "cfenv": "1.0.0",
+    "cron": "^1.1.0"
   }
 }
