@@ -13,7 +13,8 @@
     "analytics-reporter": "git+https://github.com/geramirez/analytics-reporter.git",
     "async": "^1.5.2",
     "cfenv": "1.0.0",
-    "cron": "^1.1.0"
+    "cron": "^1.1.0",
+    "memwatch-next": "^0.2.10"
   },
   "engines": {
     "node": "5.5.0"
