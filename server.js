@@ -28,7 +28,8 @@ var dhsRealTime = function(finished) {
         'slim': true,
         'publish': true
     }, function() {
-        console.log('Reports Finished')
+        console.log('Reports Finished');
+        finished();
     });
 }
 
