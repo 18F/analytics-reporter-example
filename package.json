@@ -10,6 +10,7 @@
   "author": "Gabriel Ramirez",
   "license": "ISC",
   "dependencies": {
+    "agenda": "^0.8.0",
     "analytics-reporter": "git+https://github.com/geramirez/analytics-reporter.git",
     "async": "^1.5.2",
     "cfenv": "1.0.0",
